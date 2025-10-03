@@ -95,20 +95,21 @@ public class VehicleInventory {
         }
     }
     public static void addAVehicle(Scanner scanner){
-        Vehicle vehicle = new Vehicle();
-        System.out.println("Type the Vehicle ID: ");
-        vehicle.setVehicleId(scanner.nextLong());
-        scanner.nextLine();
-        System.out.println("Model: ");
-        vehicle.setMakeModel(scanner.nextLine());
-        System.out.println("Color: ");
-        vehicle.setColor(scanner.nextLine());
-        System.out.println("Miles: ");
-        vehicle.setOdometerReading(scanner.nextInt());
-        scanner.nextLine();
-        System.out.println("Price: ");
-        vehicle.setPrice((float) scanner.nextDouble());
-        if(vehicleCount < 20) vehicles[vehicleCount++] = vehicle;
-
+        if(vehicleCount < vehicles.length) {
+            Vehicle vehicle = new Vehicle();
+            System.out.println("Type the Vehicle ID: ");
+            vehicle.setVehicleId(scanner.nextLong());
+            scanner.nextLine();
+            System.out.println("Model: ");
+            vehicle.setMakeModel(scanner.nextLine());
+            System.out.println("Color: ");
+            vehicle.setColor(scanner.nextLine());
+            System.out.println("Miles: ");
+            vehicle.setOdometerReading(scanner.nextInt());
+            scanner.nextLine();
+            System.out.println("Price: ");
+            vehicle.setPrice((float) scanner.nextDouble());
+            vehicles[vehicleCount++] = vehicle;
+        }
     }
 }
