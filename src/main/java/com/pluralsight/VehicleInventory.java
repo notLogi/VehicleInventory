@@ -79,7 +79,7 @@ public class VehicleInventory {
         System.out.println("Enter highest price: ");
         double highestPrice = scanner.nextInt();
         for(int i = 0; i < vehicleCount; i++){
-            if((float) lowestPrice < vehicles[i].getPrice() && vehicles[i].getPrice() < (float) highestPrice){
+            if((float) lowestPrice <= vehicles[i].getPrice() && vehicles[i].getPrice() <= (float) highestPrice){
                 System.out.println(vehicles[i].toString());
             }
         }
